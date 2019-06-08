@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+<p>Book Flight</p>
+
+{% endblock %}
+
+{% block body %}
+
+<li><a href="{{url_for('flights')}}"> List of Flight</a></li>
+
+
+<table class="table" style="font-size:13px; font-weight: bold; font-family: Arial; color:blue;background:white;">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Id</th>
+        <th>Origin</th>
+        <th>destination</th>
+        <th>duration</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for flight in flights %}
+        <tr>
+
+          <td>
+            {{ flight.id }}
+
+          </td>
+          <td>
+            <a href="{{url_for('flight', flight_id=flight.id)}}">{{ flight.origin }}</a>
+
+          </td>
+          <td>
+            {{ flight.destination }}
+
+          </td>
+          <td>
+            {{ flight.duration }}
+
+          </td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+<form action="{{url_for('book')}}"  method="post">
+
+    <div class="form-group">
+        <select class="form-control" name="flight_id">
+         {% for flight in flights %}
+        <option value="{{flight.id}}"> {{flight.origin}} to {{flight.destination}}</option>
+         {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+    <input class="form-control" type="text" name="name" placeholder="passenger name">
+    </div>
+
+    <div class="form-group">
+
+        <button class="btn btn-primary"> Book Flight</button>
+
+    </div>
+
+
+</form>
+
+{% endblock %}
