@@ -65,10 +65,13 @@ Download SQlite from here.
 * [Database](https://www.sqlite.org/download.html) - SQLite
 
 After downloading SQlite extract it and add path to your Envoirnment Variable for this.
-To use it type sqlite3 nameofdatabase.db.
+To use it type 
+
+
 ```
-![alt text](https://github.com/satyendraniranjan/Flight-Booking/blob/master/Capture%20for%20git.PNG)
+sqlite3 nameofdatabase.db.
 ```
+
 
 
 How to use
