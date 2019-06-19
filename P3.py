@@ -9,7 +9,8 @@ app = Flask(__name__)
 
 DATABASE_URL = 'sqlite:///C:/sqlitedatabase/test1.db';
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
-db = SQLAlchemy(app)
+app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+db.init_app(app)
 
 
 
