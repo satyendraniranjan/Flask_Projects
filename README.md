@@ -77,7 +77,8 @@ sqlite3 nameofdatabase.db.
 How to use
 ====================
 
-
+There are three main files in this project to run.
+1) FlightBooking File
 On Windows you should run the following command to Run Project. 
 ```
 (myvenv) C:\Path to Project>set FLASK_DEBUG=1
@@ -86,6 +87,24 @@ On Windows you should run the following command to Run Project.
 
 ```
 
+2) CurrencyConverter File
+On Windows you should run the following command to Run Project. 
+```
+(myvenv) C:\Path to Project>set FLASK_DEBUG=1
+(myvenv) C:\Path to Project>set FLASK_APP=P2.py
+(myvenv) C:\Path to Project>flask run
+
+```
+
+
+3) Vote File
+On Windows you should run the following command to Run Project. 
+```
+(myvenv) C:\Path to Project>set FLASK_DEBUG=1
+(myvenv) C:\Path to Project>set FLASK_APP=P2.py
+(myvenv) C:\Path to Project>flask run --no-reload 
+
+```
 
 
 Running the tests
