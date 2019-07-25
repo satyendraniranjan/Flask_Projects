@@ -99,6 +99,8 @@ url/api/flights/number(flight detail of which you want)
 
 ```
 It will return jason response :-
+
+
 Ex:
 
 ```
