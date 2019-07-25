@@ -87,6 +87,37 @@ On Windows you should run the following command to Run Project.
 
 ```
 
+***API for Flight Booking***
+
+=======================
+
+Build API for Flight Booking:
+
+url for using this api :-
+```
+url/api/flights/number(flight detail of which you want)
+
+```
+It will return jason response :-
+
+
+Ex:
+
+```
+http://127.0.0.1:5000/api/flights/1
+response for this:
+
+{   
+    "destination":"Mumbai",
+    "duration":416,
+    "origin":"New Delhi",
+    "passengers":["ALICE","Bob","Satyendra Niranjan","Satyendra","New Passenger"]
+}
+
+```
+
+
+
 2) CurrencyConverter File
 On Windows you should run the following command to Run Project. 
 ```
@@ -105,6 +136,8 @@ On Windows you should run the following command to Run Project.
 (myvenv) C:\Path to Project>flask run --no-reload 
 
 ```
+
+
 
 
 Running the tests
