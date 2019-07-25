@@ -105,7 +105,12 @@ Ex:
 http://127.0.0.1:5000/api/flights/1
 response for this:
 
-{"destination":"Mumbai","duration":416,"origin":"New Delhi","passengers":["ALICE","Bob","Satyendra Niranjan","Satyendra","New Passenger"]}
+{   
+    "destination":"Mumbai",
+    "duration":416,
+    "origin":"New Delhi",
+    "passengers":["ALICE","Bob","Satyendra Niranjan","Satyendra","New Passenger"]
+}
 
 ```
 
