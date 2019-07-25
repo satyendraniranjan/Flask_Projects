@@ -87,7 +87,8 @@ On Windows you should run the following command to Run Project.
 
 ```
 
-API for Flight Booking
+**API for Flight Booking**
+
 =======================
 
 Build API for Flight Booking:
