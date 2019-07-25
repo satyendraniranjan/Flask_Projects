@@ -53,3 +53,7 @@ def notes1():
         session['notes'].append(note)
 
     return render_template("note.html", notes=session['notes'])
+
+
+
+FLASK_DEBUG=1

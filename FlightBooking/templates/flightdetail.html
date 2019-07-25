@@ -2,13 +2,30 @@
 
 {% block heading %}
 
+<style>
 
+    ul{
+
+
+    font-size: 18px;
+    font-family: auto;
+    line-height: 35px;
+    }
+
+    p{
+
+    font-size: 22px;
+    color: blue;
+    }
+
+
+</style>
 
 {% endblock %}
 
 {% block body %}
 
-<h1>Flight Details</h1>
+<p >Flight Details</p>
 
 <ul>
     <li> Origin: {{ flight.origin }}</li>
@@ -16,7 +33,7 @@
     <li> Duration: {{ flight.duration }}  minutes</li>
 </ul>
 
-<h2> Passengers </h2>
+<p > Passengers </p>
 <ul>
     {% for passenger in passengers %}
       <li> {{passenger.name}}</li>

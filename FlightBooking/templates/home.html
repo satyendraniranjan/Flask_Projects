@@ -2,17 +2,22 @@
 
 {% block heading %}
 
-<p>Book Flight</p>
+<p style="    align-items: center; text-align: center;font-size: -webkit-xxx-large;
+    font-style: italic;font-family: auto;">Flight Booking</p>
 
 {% endblock %}
 
 {% block body %}
 
-<li><a href="{{url_for('flights')}}"> List of Flight</a></li>
+
+<li><a href="{{url_for('flights')}}" style="font-size: x-large;padding: 20px;"> List of Flight</a></li>
+
+<li></li>
+<li><a href="{{url_for('flightbooking')}}" style="font-size: x-large;padding: 20px;"> Book Flight</a></li>
 
 
-<table class="table" style="font-size:13px; font-weight: bold; font-family: Arial; color:blue;background:white;">
-    <thead class="thead-inverse">
+<table class="table" style="font-size:17px; font-weight: bold; font-family: Arial; color:black;background:white; padding: 15px;">
+    <thead class="thead-inverse" style="    background: blueviolet; padding: 20px; font-size: 20px;">
       <tr>
         <th>Id</th>
         <th>Origin</th>
@@ -49,7 +54,7 @@
   </table>
 
 
-<form action="{{url_for('book')}}"  method="post">
+<!--<form action="{{url_for('book')}}"  method="post">
 
     <div class="form-group">
         <select class="form-control" name="flight_id">
@@ -70,6 +75,6 @@
     </div>
 
 
-</form>
+</form>-->
 
 {% endblock %}

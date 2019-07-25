@@ -16,7 +16,13 @@ db = scoped_session(sessionmaker(bind=engine))
 @app.route("/")
 def index():
     flights = db.execute("SELECT * FROM flights").fetchall()
-    return render_template("flight.html", flights=flights)
+    return render_template("home.html", flights=flights)
+
+@app.route("/flightbooking")
+def flightbooking():
+    flights1 = db.execute("SELECT * FROM flights").fetchall()
+    return render_template("booking.html", flights1 = flights1)
+
 
 @app.route("/book", methods=['POST'])
 def book():
@@ -53,7 +59,7 @@ def flight(flight_id):
 
     passengers =  db.execute("SELECT name FROM passengers WHERE flight_id= :flight_id",
                              {"flight_id": flight_id}).fetchall()
-    return render_template("flight1.html", flight=flight, passengers=passengers)
+    return render_template("flightdetail.html", flight=flight, passengers=passengers)
 
 
 @app.route("/api/flights/<int:flight_id>")
@@ -77,4 +83,5 @@ def flight_api(flight_id):
         "passengers": names
     }
     return jsonify(data)
+
 
