@@ -43,13 +43,42 @@
 
     <title> Currency Converter</title>
 
+ <style>
+
+     body{
+
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            background: blueviolet;
+
+     }
+
+     #form{
+            padding: 40px;
+            font-size: 30px;
+            width: 100%;
+
+
+     }
+
+     #result{
+                font-size: 25px;
+                font-style: normal;
+                color: floralwhite;
+
+     }
+
+ </style>
 </head>
 <body>
+    <h1>Currency Converter</h1>
+    <h5>Base Currency: EUR</h5>
     <form id="form">
-        <input id="currency" autocomplete="off" autofocus placeholder="Currency">
+        <input id="currency" autocomplete="off" autofocus placeholder="Currency"n style="width: 50%;">
         <input type="submit" value="Get Exchange Rate">
     </form>
     <br>
-    <div id="result"> Hi</div>
+    <div id="result"> </div>
 </body>
 </html>
